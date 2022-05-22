@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Doings;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,5 +21,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        Doings::factory(10)->create();
     }
 }
