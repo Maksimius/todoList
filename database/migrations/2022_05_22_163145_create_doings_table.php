@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('doings', function (Blueprint $table) {
             $table->id();
             $table->string('title',255);
-            $table->unsignedSmallInteger('finished')->default(0);
-            $table->unsignedSmallInteger('urgent')->default(0);
+            $table->unsignedTinyInteger('finished')->default(0);
+            $table->unsignedTinyInteger('urgent')->default(0);
             $table->timestamps();
         });
     }

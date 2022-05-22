@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class DoingsController extends Controller
 {
-    //
+    public function index()
+    {
+        echo "Hello World";
+    }
 }

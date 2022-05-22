@@ -18,8 +18,8 @@ class DoingsFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(3),
-            'finished' => $this->faker->randomNumber([0,1]),
-            'urgent' => $this->faker->randomNumber([0,1]),
+            'finished' => $this->faker->randomElement([0,1]),
+            'urgent' => $this->faker->randomElement([0,1]),
         ];
     }
 }
