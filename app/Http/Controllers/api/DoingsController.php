@@ -10,13 +10,16 @@ class DoingsController extends Controller
 {
     public function index()
     {
-        return Doings::get()->all();
+        return [
+            'todos'  => Doings::where(['urgent' => 0])->get()->sortBy('finished')->all(),
+            'urgent' => Doings::where(['urgent' => 1])->get()->sortBy('finished')->all(),
+        ];
     }
 
     public function store(Request $request)
     {
-        $doing = new Doings($request->safe());
-        if ($doing->validate($request->safe())) {
+        $doing = new Doings($request->all());
+        if ($doing->validate($request->all())) {
             $doing->save();
             return $doing;
         }

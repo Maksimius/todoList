@@ -8,6 +8,6 @@ class DoingsController extends Controller
 {
     public function index()
     {
-        echo "Hello World";
+        return view('doingsMain');
     }
 }

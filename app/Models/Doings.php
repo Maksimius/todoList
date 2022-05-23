@@ -25,8 +25,8 @@ class Doings extends Model
      */
     protected $rules = [
         'title' => 'string|min:3',
-        'urgent' => 'boolean',
-        'finished' => 'boolean',
+        'urgent' => 'bool',
+        'finished' => 'bool',
     ];
 
     /**
@@ -48,7 +48,7 @@ class Doings extends Model
      * @param Boolean $urgent
      * @return void
      */
-    public function setUrgent(boolean $urgent)
+    public function setUrgent(bool $urgent)
     {
         $this->urgent = $urgent ? 1 : 0;
     }
@@ -59,7 +59,7 @@ class Doings extends Model
      * @param Boolean $finished
      * @return void
      */
-    public function setDone(boolean $finished)
+    public function setDone(bool $finished)
     {
         $this->finished = $finished ? 1 : 0;
     }
